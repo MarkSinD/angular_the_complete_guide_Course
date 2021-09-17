@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-steaks-list
+      (steakWasSelected)="selectedSteak = $event">
+    </app-steaks-list>
+  </div>
+  <div class="col-md-7">
+    <app-steaks-detail
+      *ngIf="selectedSteak; else infoText"
+      [steak]=selectedSteak>
+    </app-steaks-detail>
+
+    <ng-template #infoText>
+      <p>Please select a Steak</p>
+    </ng-template>
+  </div>
+</div>

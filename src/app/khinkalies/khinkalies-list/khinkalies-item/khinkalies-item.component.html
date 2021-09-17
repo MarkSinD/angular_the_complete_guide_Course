@@ -1,0 +1,10 @@
+<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{khinkali.name}}</h4>
+    <p class="list-group-item-text">{{khinkali.description}}</p>
+  </div>
+
+  <div class="pull-right">
+    <img [src]="khinkali.imagePath" alt="{{khinkali.name}}" class="img-responsive" style="max-height: 50px">
+  </div>
+</a>

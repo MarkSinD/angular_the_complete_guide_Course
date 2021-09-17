@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-khinkalies-list
+      (khinkaliWasSelected)="selectedKhinkali = $event">
+    </app-khinkalies-list>
+  </div>
+  <div class="col-md-7">
+    <app-khinkalies-detail
+      *ngIf="selectedKhinkali; else infoText"
+      [khinkali]="selectedKhinkali">
+    </app-khinkalies-detail>
+
+    <ng-template #infoText>
+      <p>Please select khinkali</p>
+    </ng-template>
+  </div>
+</div>

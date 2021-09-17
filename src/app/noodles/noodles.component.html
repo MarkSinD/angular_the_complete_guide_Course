@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-noodles-list
+      (noodleWasSelected)="selectedNoodle = $event">
+    </app-noodles-list>
+  </div>
+  <div class="col-md-7">
+    <app-noodles-detail
+      *ngIf="selectedNoodle; else infoText"
+      [noodle]="selectedNoodle">
+    </app-noodles-detail>
+
+    <ng-template #infoText>
+      <p>Please select a Noodle</p>
+    </ng-template>
+
+    <ng-template #dangerText>
+      <p>Danger Text</p>
+    </ng-template>
+
+    <ng-template #strangeText>
+      <p>Strange Text</p>
+    </ng-template>
+
+    <ng-template #scaryText>
+      <p>Scary Text</p>
+    </ng-template>
+  </div>
+</div>

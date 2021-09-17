@@ -1,0 +1,17 @@
+<a
+  href="#"
+  class="list-group-item clearfix"
+  (click)="onSelected()">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ roll.name }}</h4>
+    <p class="list-group-item-text">{{ roll.description }}</p>
+  </div>
+  <span class="pull-right">
+    <img [src]="roll.imagePath"
+    alt="{{ roll.name }}"
+    class="img-responsive"
+    style="max-height: 50px;">
+  </span>
+
+
+</a>

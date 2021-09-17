@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-roll-list
+      (rollWasSelected)="selectedRoll = $event">
+    </app-roll-list>
+  </div>
+  <div class="col-md-7">
+    <app-roll-detail
+      *ngIf="selectedRoll; else infoText"
+      [roll]="selectedRoll">
+    </app-roll-detail>
+
+    <ng-template #infoText>
+      <p>Please select a Roll</p>
+    </ng-template>
+
+    <ng-template #dangerText>
+      <p>Danger Text</p>
+    </ng-template>
+
+    <ng-template #strangeText>
+      <p>Strange Text</p>
+    </ng-template>
+
+    <ng-template #scaryText>
+      <p>Scary Text</p>
+    </ng-template>
+  </div>
+</div>

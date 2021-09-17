@@ -2,8 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+      <app-recipes *ngIf="loadedFeature === 'pizza'"></app-recipes>
+      <app-burgers *ngIf="loadedFeature === 'burgers'"></app-burgers>
+      <app-rolls *ngIf="loadedFeature === 'rolls'"></app-rolls>
+      <app-steaks *ngIf="loadedFeature === 'steaks'"></app-steaks>
+      <app-noodles *ngIf="loadedFeature === 'noodles'"></app-noodles>
+      <app-khinkalies *ngIf="loadedFeature == 'khinkali'"></app-khinkalies>
+
+      <app-shopping-list *ngIf="loadedFeature == 'shopping-list'"></app-shopping-list>
+
     </div>
   </div>
 </div>
